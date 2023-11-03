@@ -1,0 +1,148 @@
+1660230680;11.08.2022 15:11:20;démarrage ESP32
+1660231556;11.08.2022 15:25:56;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+1;01.01.1970 00:00:01;démarrage ESP32
+30;01.01.1970 00:00:30;message reçu :<2;2.00;3.00;4.00>
+60;01.01.1970 00:01:00;message reçu :<2;2.00;3.00;4.00>
+90;01.01.1970 00:01:30;message reçu :<2;2.00;3.00;4.00>
+120;01.01.1970 00:02:00;message reçu :<2;2.00;3.00;4.00>
+150;01.01.1970 00:02:30;message reçu :<2;2.00;3.00;4.00>
+1;01.01.1970 00:00:01;démarrage ESP32
+30;01.01.1970 00:00:30;message reçu :<2;2.00;3.00;4.00>
+60;01.01.1970 00:01:00;message reçu :<2;2.00;3.00;4.00>
+90;01.01.1970 00:01:30;message reçu :<2;2.00;3.00;4.00>
+120;01.01.1970 00:02:00;message reçu :<2;2.00;3.00;4.00>
+150;01.01.1970 00:02:30;message reçu :<2;2.00;3.00;4.00>
+180;01.01.1970 00:03:00;message reçu :<2;2.00;3.00;4.00>
+210;01.01.1970 00:03:30;message reçu :<2;2.00;3.00;4.00>
+240;01.01.1970 00:04:00;message reçu :<2;2.00;3.00;4.00>
+270;01.01.1970 00:04:30;message reçu :<2;2.00;3.00;4.00>
+1;01.01.1970 00:00:01;démarrage ESP32
+30;01.01.1970 00:00:30;message reçu :<2;2.00;3.00;4.00>
+60;01.01.1970 00:01:00;message reçu :<2;2.00;3.00;4.00>
+90;01.01.1970 00:01:30;message reçu :<2;2.00;3.00;4.00>
+120;01.01.1970 00:02:00;message reçu :<2;2.00;3.00;4.00>
+1660234415;11.08.2022 16:13:35;démarrage ESP32
+1660234440;11.08.2022 16:14:00;message reçu :<2;2.00;3.00;4.00>
+1660234470;11.08.2022 16:14:30;message reçu :<2;2.00;3.00;4.00>
+1663057694;13.09.2022 08:28:14;démarrage ESP32
+9;01.01.1970 00:00:09;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+15;01.01.1970 00:00:15;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+21;01.01.1970 00:00:21;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+27;01.01.1970 00:00:27;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+33;01.01.1970 00:00:33;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+39;01.01.1970 00:00:39;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+45;01.01.1970 00:00:45;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+51;01.01.1970 00:00:51;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+58;01.01.1970 00:00:58;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+64;01.01.1970 00:01:04;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+70;01.01.1970 00:01:10;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+8;01.01.1970 00:00:08;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+14;01.01.1970 00:00:14;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+20;01.01.1970 00:00:20;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+26;01.01.1970 00:00:26;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+32;01.01.1970 00:00:32;Le serveur NTP  n'a pas été correctement contacté. On attend 1 sec et on réessaye
+8;01.01.1970 00:00:08;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+14;01.01.1970 00:00:14;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+20;01.01.1970 00:00:20;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+26;01.01.1970 00:00:26;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+32;01.01.1970 00:00:32;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+38;01.01.1970 00:00:38;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+44;01.01.1970 00:00:44;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+50;01.01.1970 00:00:50;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+57;01.01.1970 00:00:57;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+63;01.01.1970 00:01:03;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+69;01.01.1970 00:01:09;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+1673360633;10.01.2023 14:23:53;Erreur d'ouverture de /mesures.csv
+12;01.01.1970 00:00:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+18;01.01.1970 00:00:18;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+24;01.01.1970 00:00:24;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+36;01.01.1970 00:00:36;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+42;01.01.1970 00:00:42;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+48;01.01.1970 00:00:48;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+54;01.01.1970 00:00:54;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+60;01.01.1970 00:01:00;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+66;01.01.1970 00:01:06;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+72;01.01.1970 00:01:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+12;01.01.1970 00:00:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+18;01.01.1970 00:00:18;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+24;01.01.1970 00:00:24;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+36;01.01.1970 00:00:36;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+42;01.01.1970 00:00:42;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+48;01.01.1970 00:00:48;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+54;01.01.1970 00:00:54;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+60;01.01.1970 00:01:00;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+66;01.01.1970 00:01:06;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+72;01.01.1970 00:01:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+12;01.01.1970 00:00:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+18;01.01.1970 00:00:18;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+24;01.01.1970 00:00:24;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+36;01.01.1970 00:00:36;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+42;01.01.1970 00:00:42;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+48;01.01.1970 00:00:48;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+54;01.01.1970 00:00:54;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+21;01.01.1970 00:00:21;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+21;01.01.1970 00:00:21;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+72;01.01.1970 00:01:12;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+78;01.01.1970 00:01:18;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+84;01.01.1970 00:01:24;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+90;01.01.1970 00:01:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+96;01.01.1970 00:01:36;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+102;01.01.1970 00:01:42;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+108;01.01.1970 00:01:48;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+114;01.01.1970 00:01:54;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+120;01.01.1970 00:02:00;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+126;01.01.1970 00:02:06;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+23;01.01.1970 00:00:23;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+33;01.01.1970 00:00:33;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+39;01.01.1970 00:00:39;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+33;01.01.1970 00:00:33;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+30;01.01.1970 00:00:30;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+41;01.01.1970 00:00:41;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+35;01.01.1970 00:00:35;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+16;01.01.1970 00:00:16;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+16;01.01.1970 00:00:16;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+16;01.01.1970 00:00:16;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+16;01.01.1970 00:00:16;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye
+22;01.01.1970 00:00:22;Le serveur NTP pool.ntp.org n'a pas été correctement contacté. On attend 1 sec et on réessaye

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML><html>
+<head>
+  <title>ESP-NOW DASHBOARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="icon" href="data:,">
+  <style>
+    html {font-family: Arial; display: inline-block; text-align: center;}
+    p {  font-size: 1.2rem;}
+    body {  margin: 0;}
+	.status {text-align: left;}
+    .topnav { overflow: hidden; background-color: #2f4468; color: white; font-size: 1.7rem; }
+    .content { padding: 20px; }
+    .card { background-color: white; box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5); }
+    .cards { max-width: 700px; margin: 0 auto; display: grid; grid-gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .reading { font-size: 2.8rem; }
+    .packet { color: #bebebe; }
+    .card.temperature { color: #fd7e14; }
+    .card.humidity { color: #1b78e2; }
+    .card.pression { color: #1b78e2; }
+    .card.vitesse { color: #1b78e2; }
+    .card.niveau { color: #1b78e2; }
+    .card.girouette { color: #1b78e2; }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <h3>TABLEAU DE BORD DE LA STATION METEO</h3>
+  </div>
+  <div class="content status">
+  <div class="cards">
+  <div class="card">
+  <h4>ETAT GENERAL DU MODULE</h4>
+  <p>Prochain num&eacute;ro de Mesure : <span id="nextMesureId">?</span></p>
+  <p>Nombre de mesures en attente de stockage : <span id="nbMesures">inconnu</span></p>
+  <p>Acces Internet : <span id="wifi">Etat inconnu</span></p>
+  <p>Carte SD : <span id="SDstatus">Etat inconnu</span></p>
+  <p>Date : <span id="date"></span> <span id="heure"></span></p>
+=
+  
+  </div>
+  </div>
+  </div>
+
+  <div class="content">
+    <div class="cards">
+	  %boards%
+    </div>
+  </div>
+<script>
+function sendEpochTime(){
+  var secondsSinceEpoch = Math.round(Date.now() / 1000);
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/setEpochTime?epochtime="+secondsSinceEpoch, false);
+  xhr.send();
+}
+
+function sendEvents() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/sendEvents", false);
+  xhr.send();
+}
+if (!!window.EventSource) {
+ var source = new EventSource('/events');
+ 
+ source.addEventListener('open', function(e) {
+  console.log("Events Connected");
+  sendEvents();
+  sendEpochTime();
+ }, false);
+ source.addEventListener('error', function(e) {
+  if (e.target.readyState != EventSource.OPEN) {
+    console.log("Events Disconnected");
+  }
+ }, false);
+ 
+ source.addEventListener('message', function(e) {
+  console.log("message", e.data);
+ }, false);
+ 
+ source.addEventListener('new_readings', function(e) {
+  console.log("new_readings", e.data);
+  var obj = JSON.parse(e.data);
+  var elem = document.getElementById(obj.type+obj.id); 
+  if(elem !== null ) elem.innerHTML=obj.value;
+  elem = document.getElementById("u"+obj.type+obj.id); 
+  if(elem !== null ) elem.innerHTML=new Date(obj.time_stamp*1000).toLocaleTimeString("fr-FR");
+  elem = document.getElementById("heure"); 
+  if(elem !== null ) elem.innerHTML=new Date(obj.time_stamp*1000).toLocaleTimeString("fr-FR");
+  elem = document.getElementById("date"); 
+  if(elem !== null ) elem.innerHTML=new Date(obj.time_stamp*1000).toLocaleDateString("fr-FR");
+  elem = document.getElementById("o"+obj.type+obj.id); 
+  if(elem !== null ) elem.innerHTML=obj.owner;
+  elem = document.getElementById("nextMesureId");
+  if(elem !== null ) elem.innerHTML=obj.nextMesureId;
+  elem = document.getElementById("SDstatus");
+  if(elem !== null ) elem.innerHTML=obj.SDstatus;
+  elem = document.getElementById("wifi");
+  if(elem !== null ) elem.innerHTML=obj.wifi;
+  elem = document.getElementById("nbMesures");
+  if(elem !== null ) elem.innerHTML=obj.nbMesures;
+  
+ }, false);
+}
+
+</script>
+</body>
+</html>

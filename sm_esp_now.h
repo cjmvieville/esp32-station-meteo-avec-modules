@@ -1,0 +1,38 @@
+#ifndef sm_esp_now
+#define sm_esp_now
+
+#include <esp_now.h>
+#include <WiFi.h>
+#include "ESPAsyncWebServer.h"
+#include <Arduino.h>
+#include "sm_mesures.h"
+#include "sm_wifi.h"
+#include "main.h"
+#include <ArduinoJson.h>
+
+// Structure example to receive data
+// Must match the sender structure
+// taille maximale = 250
+// ici taille = 18 octets
+typedef struct struct_message {
+  uint8_t msgType; // 1 octet
+  uint8_t id; // 1 octet
+  unsigned int seqNum; // 4 octets -> utile ?
+  float valeurs[10]; // taille = 10 * 4 = 40 octets  -> on pourrait avoir float valeurs[60]
+} struct_message;
+
+
+
+typedef struct struct_pairing {       // new structure for pairing
+    uint8_t msgType;
+    uint8_t id;
+    uint8_t macAddr[6];
+    uint8_t channel;
+} struct_pairing;
+
+
+enum MessageType {PAIRING, DATA,};
+
+bool setup_ESP_NOW();
+
+#endif
