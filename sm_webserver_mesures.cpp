@@ -4,10 +4,16 @@
 int from = 1;
 int to= 100;
 int numLigne=0;
+size_t len=0;
+size_t pos=0;
 File file;
 bool serverBusy=false;
 
 void resetServerBusy(){
+  serverBusy=false;
+}
+size_t _close(){
+  file.close();
   serverBusy=false;
 }
 AsyncWebServerResponse * fillMesures(AsyncWebServerRequest *request){
@@ -15,6 +21,8 @@ if(serverBusy){
       request->send(503, "text/plain", "serveur occupe");
     }
     serverBusy=true;
+    len=0;
+    pos=0;
     setup_File();
     file = SD_MMC.open("/mesures.csv", FILE_READ);
     numLigne=0;
@@ -27,54 +35,57 @@ if(serverBusy){
       to=request->getParam("to")->value().toInt();
     }
     if(from<0){from=0;}
-    if(to<0||to<from){ to=-1;}  
+    if(to<0||to<from){ to=-1;} 
+    String s ="";
 
-    AsyncWebServerResponse *response = request->beginChunkedResponse("text/plain", [](uint8_t *buffer, size_t maxLen, size_t index) -> size_t {
-      while(file.available()&&numLigne<from){
-        file.readStringUntil('\n');numLigne++;
-      }
-      if (file.available()){
-        return file.read(buffer, maxLen);  
-        } else {
-          file.close();
-          serverBusy=false;
-          return 0;
-        }
-      /*if(file.available()&&numLigne<from){
-        if(numLigne<nextIdMesure-10000){for (int i=0; i<10000; i++){file.readStringUntil('\n');numLigne++;}}
-        if(numLigne<nextIdMesure-1000){for (int i=0; i<1000; i++){file.readStringUntil('\n');numLigne++;}}
-        if(numLigne<nextIdMesure-100){for (int i=0; i<100; i++){file.readStringUntil('\n');numLigne++;}}
-        if(numLigne<nextIdMesure-10){for (int i=0; i<10; i++){file.readStringUntil('\n');numLigne++;}}
-        file.readStringUntil('\n');
-        numLigne++;
-        memcpy(buffer, s.c_str(), s.length()+1);
-        return s.length();
-        if (imageSize - alreadySent >= maxLen) {
-      memcpy(buffer, jpg + alreadySent, maxLen);
-      return maxLen;
-    } else {  // last chunk and then 0
-      memcpy(buffer, jpg + alreadySent, imageSize - alreadySent);
-      return imageSize - alreadySent; 
+
+    while(file.available()&&numLigne<from){
+      s=file.readStringUntil('\n');
+      pos+=s.length()+1;
+      numLigne++;
     }
-      } */
-     /* while(file.available()&&numLigne<from){
-        file.readStringUntil('\n');numLigne++;
-        if(numLigne%100==0){
-            memcpy(buffer, s.c_str(), s.length()+1);
-            return s.length()+1;
-        }
-      }
-      
-      s="\n";
-      if(file.available()&&(to==-1||numLigne<=to)){
-        s+=file.readStringUntil('\n');
+    if(to!=-1){
+      while(file.available()&&numLigne<=to){
+        s=file.readStringUntil('\n');
         numLigne++;
-        memcpy(buffer, s.c_str(), s.length()+1);
-        return s.length()+1;
-      } 
-      file.close();  
-      serverBusy=false;
-      return 0;*/
+        len+=s.length()+1;
+     } 
+    } else {
+      len=-1;
+    }
+
+    Serial.print("from= ");Serial.println(from);
+    Serial.print("to= ");Serial.println(to);
+    Serial.print("len= ");Serial.println(len);
+    Serial.print("pos= ");Serial.println(pos);
+    file.seek(pos);
+    
+    AsyncWebServerResponse *response = request->beginChunkedResponse("text/plain", [](uint8_t *buffer, size_t maxLen, size_t index) -> size_t {
+      // il y a un to
+      if (file.available()&&len>=0){
+        Serial.print("len= ");Serial.println(len);
+        if(len<maxLen) {
+          size_t l=len;
+          len=0;
+          size_t r= file.read(buffer, l);
+          if(r==0) _close();
+          return r;
+        } else if(len>=maxLen){
+          len-=maxLen;
+          if(len<0) len=0;
+          size_t r= file.read(buffer, maxLen);
+          if(r==0) _close();
+          return r;
+        } 
+      }
+      // pas de to
+      if (file.available()&&len<0){
+        size_t r= file.read(buffer, maxLen);
+        if(r==0) _close();
+        return r;
+      }
+
+      
       });
       return response;
 }

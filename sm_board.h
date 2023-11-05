@@ -16,14 +16,14 @@ typedef struct t_board {
   String  * payloads;
 } board;
 
-bool setup_Board();
-char getBoardValueAsChar(board *_board, int index);
-int getMaxBoards();
-board * getBoardById(int boardId);
-board * getBoardByIndex(int index);
-String getIndex_html();
-String getBoardString(String myString, int index);
-String boardToString (board _board);
-int getNumberOfValues( String data);
+bool setup_Board(); // initialise la description des capteurs à partir du fichier boards.csv
+char getBoardValueAsChar(board *_board, int index); // Retourne le type de mesure à la position définie par l'argument "index" du capteur board
+int getMaxBoards(); // Retourne le nombre de capteurs qui ont été définis dans le fichier boards.csv
+board * getBoardById(int boardId); // Retourne le capteur qui possède l'id défini par l'argument boardId
+board * getBoardByIndex(int index); // Retourne le capteur à la position définie par l'argument index
+String getIndex_html(); // Retourne la page html principale du tableau de bors des capteurs 
+String getBoardString(String myString, int index); 
+String boardToString (board _board); // Retourne une chaine de caractère représentant la description du capteur correspondant à l'argument _board
+int getNumberOfValues( String data); // Retourne le nombre de valeurs définies dans le descripteur data 
 
 #endif

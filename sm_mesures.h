@@ -30,10 +30,10 @@ typedef struct t_listeMesures{
     struct t_mesureNode *p_display; // dernière mesure affichée
 } ListeMesures;
 
-bool setup_Mesures();
-unsigned long getNextIdMesure();
-mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index);
-ListeMesures * getListMesures();
-void ajouterMesure(mesure * p_mesure);
-void storeMesure();
+bool setup_Mesures(); // initialise la liste des mesures qui seront manipulées par la carte
+unsigned long getNextIdMesure(); // Retourn l'id de la prochaine mesure
+mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index); // crée et renvoie une mesure de valeur value envoyée par une carte à la position index 
+ListeMesures * getListMesures(); // Retourne la liste des mesures
+void ajouterMesure(mesure * p_mesure); // Ajoute une mesure à la liste
+void storeMesure(); // stocke la première mesure de la liste et la retire de cette liste
 #endif

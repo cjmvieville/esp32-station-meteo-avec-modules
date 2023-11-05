@@ -33,6 +33,6 @@ typedef struct struct_pairing {       // new structure for pairing
 
 enum MessageType {PAIRING, DATA,};
 
-bool setup_ESP_NOW();
+bool setup_ESP_NOW(); // initialise le protocole de communication ESP-NOW de la carte 
 
 #endif
