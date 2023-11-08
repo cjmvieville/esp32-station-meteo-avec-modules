@@ -9,6 +9,7 @@ struct_pairing pairingData;
 
 MessageType messageType;
 
+
 // ---------------------------- esp_ now -------------------------
 void _printMAC(const uint8_t * mac_addr){
   char macStr[18];
@@ -57,18 +58,18 @@ void _OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len)
   switch (type) {
   case DATA :                           // the message is data type
     memcpy(&incomingReadings, incomingData, sizeof(incomingReadings));
-    Serial.println("carte id :"+String(incomingReadings.id));
     _board=getBoardById(incomingReadings.id);
       Serial.println(incomingReadings.seqNum);
     if(_board!=NULL) {
       for(int i=0; i<getNumberOfValues(_board->mesureTypes);i++) {
         StaticJsonDocument<1000> carte;
         String payload;
-        mesure *_mesure=creerMesure(_board,incomingReadings.seqNum, incomingReadings.valeurs[i],i);
+        mesure *_mesure=creerMesure(_board,incomingReadings.seqNum, incomingReadings.valeurs[i],incomingReadings.stringValues[i],i);
         ajouterMesure(_mesure);
         carte["id"] = _mesure->boardId;
         carte["type"] = String(_mesure->typeId);
         carte["value"] = String(_mesure->value,2);
+        carte["stringValue"] = String(_mesure->stringValue);
         carte["time_stamp"] = _mesure->timeStamp;
         carte["owner"] = getBoardById(_mesure->boardId)->owner;
         carte["SDstatus"] = getSDstatus_File()?"SD en place":"SD manquante";

@@ -8,6 +8,7 @@
 #include "SPI.h"
 #include "sm_wifi.h"
 
+
 bool setup_File(); // initialise l'acès à la carte SD
 void print_File(char * path); 
 String readHtml_File(char * filename); // Retourne le contenu du fichier défini par l'argument filename
