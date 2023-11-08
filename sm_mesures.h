@@ -7,6 +7,7 @@
 #include "sm_board.h"
 #include "sm_wifi.h"
 
+const int maxStringLen = 20;
 // GESTION DE LA LISTE DES MESURES
 // Définition de la structure d'une mesure
 typedef struct t_mesure {
@@ -16,6 +17,7 @@ typedef struct t_mesure {
   char typeId; //identifiant du type de mesure
   long timeStamp; // estampille temporelle
   float value; // valeur de la mesure
+  char stringValue[maxStringLen]; // la stringValue éventuellment ajoutée
 } mesure;
 // Définition de la structure d'un noeud de la liste
 struct t_mesureNode{
@@ -32,7 +34,7 @@ typedef struct t_listeMesures{
 
 bool setup_Mesures(); // initialise la liste des mesures qui seront manipulées par la carte
 unsigned long getNextIdMesure(); // Retourn l'id de la prochaine mesure
-mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index); // crée et renvoie une mesure de valeur value envoyée par une carte à la position index 
+mesure* creerMesure(board *_board, unsigned int seqNum, float value, char stringValue[maxStringLen], int index); // crée et renvoie une mesure de valeur value envoyée par une carte à la position index 
 ListeMesures * getListMesures(); // Retourne la liste des mesures
 void ajouterMesure(mesure * p_mesure); // Ajoute une mesure à la liste
 void storeMesure(); // stocke la première mesure de la liste et la retire de cette liste

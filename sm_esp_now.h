@@ -10,6 +10,8 @@
 #include "main.h"
 #include <ArduinoJson.h>
 
+const int maxValue = 10; // defini le nombre maximun de valeurs transmises par un capteur
+
 // Structure example to receive data
 // Must match the sender structure
 // taille maximale = 250
@@ -18,7 +20,9 @@ typedef struct struct_message {
   uint8_t msgType; // 1 octet
   uint8_t id; // 1 octet
   unsigned int seqNum; // 4 octets -> utile ?
-  float valeurs[10]; // taille = 10 * 4 = 40 octets  -> on pourrait avoir float valeurs[60]
+  float valeurs[maxValue]; // taille = 10 * 4 = 40 octets  -> on pourrait avoir float valeurs[60]
+  // il reste 250 -46 soit 206 caractères 
+  char stringValues[maxValue][maxStringLen] ; 
 } struct_message;
 
 

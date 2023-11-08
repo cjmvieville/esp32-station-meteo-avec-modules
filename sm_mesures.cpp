@@ -20,6 +20,10 @@ char _getTypeId(mesure * p_mesure){
 float _getValue(mesure * p_mesure){
   return p_mesure->value;
 }
+// Retourne la stringValue d'une mesure 
+char *_getStringValue(mesure * p_mesure){
+  return p_mesure->stringValue;
+}
 // Retourne l'estampille temporelle d'une mesure
 long _getTimeStamp(mesure * p_mesure){
   return p_mesure->timeStamp;
@@ -46,7 +50,7 @@ void _incIdMesure(){
  *  - la valeur de la mesure
  *  - l'index de cette mesure pour cette carte (0-2)
  */
-mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index){
+mesure* creerMesure(board *_board, unsigned int seqNum, float value, char stringValue[], int index){
   mesure* _mesure = (mesure *) malloc(sizeof (* _mesure));
   if(_mesure!=NULL){
     _mesure->mesureId=nextIdMesure++;
@@ -55,6 +59,7 @@ mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index){
     _mesure->typeId=getBoardValueAsChar(_board,index);
     _mesure->timeStamp=getCurrentTime_Wifi();
     _mesure->value=value;
+    memcpy(&_mesure->stringValue,stringValue,maxStringLen);
     return _mesure;
   }
   return NULL;
@@ -64,7 +69,7 @@ mesure* creerMesure(board *_board, unsigned int seqNum, float value, int index){
 
 // Retourne une string décrivant la mesure
 String _mesureToString(mesure * p_mesure){
-  return "Mesure reçue de "+ String(p_mesure->boardId) + " ["+ getBoardById(p_mesure->boardId)->owner + "] ---> " +String(_getMesureId(p_mesure)) + " à " + String(_getTimeStamp(p_mesure)) + " secs depuis 1/1/1970 : " + String(_getTypeId(p_mesure)) + " = " + String(_getValue(p_mesure));
+  return "Mesure reçue de "+ String(p_mesure->boardId) + " ["+ getBoardById(p_mesure->boardId)->owner + "] ---> " +String(_getMesureId(p_mesure)) + " à " + String(_getTimeStamp(p_mesure)) + " secs depuis 1/1/1970 : " + String(_getTypeId(p_mesure)) + " = " + String(_getValue(p_mesure))+" ("+String(_getStringValue(p_mesure))+")";
 }
 
 
@@ -75,7 +80,8 @@ String _mesureToCSV(mesure * _mesure){
   _s+=String(_mesure->typeId)+";";
   _s+=String(_mesure->timeStamp)+";";
   _s+=String(timeToString_Wifi(_mesure->timeStamp))+";";
-  _s+=String(_mesure->value)+"\n";
+  _s+=String(_mesure->value)+";";
+  _s+=String(_mesure->stringValue)+"\n";
   return _s;
 }
 
